@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Examples</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="" rel="stylesheet">
+    <style id="styleInline">
+    body {
+        margin: 0;
+        margin-top: 30px;
+        background: black;
+        color: #fff;
+    }
+    svg {
+        display: block;
+        margin: 0 auto;
+    }
+    /*    
+    .head-circle {
+        -webkit-animation: dash_circle 0.5s ease 1 alternate;
+    }
+    .polyline {
+        -webkit-animation: dash 0.5s ease 1 alternate;
+    }
+    .tail-circle {
+        -webkit-transform: rotate(100deg);  
+        -webkit-transform-origin: 50% 50%;  
+        -webkit-animation: dash_circle 0.5s ease 1 alternate;
+    }
+
+    @-webkit-keyframes dash_circle {
+        from {
+            stroke-dashoffset: 25.1327412287183;
+        }
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @-webkit-keyframes dash {
+        from {
+            opacity: 1;
+            stroke-dashoffset: 211.803398874989;
+        }
+        to {
+            opacity: 1;
+            stroke-dashoffset: 0;
+        }
+    }*/
+    </style>
+</head>
+
+<body>
+    <script src="linkLineTip.js"></script>
+    <script>
+    //usage:
+    var lineTip = new LineTip({
+        points: {
+            color: "#fff",
+            size: 2,
+            radius: 4,
+            opacity: 0.8,
+            animateTime: 0.5,
+            animateType: "ease"
+        },
+        line: {
+            color: "#fff",
+            size: 2,
+            opacity: 0.6,
+            animateTime: 1,
+            animateType: "ease"
+        }
+    });
+
+
+
+    lineTip.add({
+        points: [
+            [0, 0],
+            [100, 0],
+            [150, -100]
+        ],
+
+        html: {
+            width: 200,
+            height: 200,
+            tpl: function() {
+                return '<div style="padding:5px">The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs</div>';
+            }
+        }
+    });
+
+    lineTip.add({
+        points: [
+            [0, 0],
+            [100, 0],
+            [150, 100]
+        ],
+        html: {
+            width: 200,
+            height: 200,
+            tpl: function() {
+                return '<div style="padding:5px">The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs</div>';
+            }
+        }
+    });
+
+    lineTip.add({
+        points: [
+            [0, 0],
+            [-100, 0],
+            [-150, -100]
+        ],
+        html: {
+            width: 200,
+            height: 200,
+            tpl: function() {
+                return '<div style="padding:5px">The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs</div>';
+            }
+        }
+    });
+
+    lineTip.add({
+        points: [
+            [0, 0],
+            [-100, 0],
+            [-150, 100]
+        ],
+        html: {
+            width: 200,
+            height: 200,
+            tpl: function() {
+                return '<div style="padding:5px">The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs</div>';
+            }
+        }
+    });
+    </script>
+</body>
+
+</html>
